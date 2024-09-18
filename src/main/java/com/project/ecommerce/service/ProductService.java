@@ -17,6 +17,7 @@ public class ProductService {
     ProductRepository productRepository;
 
     public ResponseEntity<String> addProduct(Product request) {
+
         Products product = Products.builder().product_name(request.getProductName())
                 .product_description(request.getProductDesc())
                 .product_price(Long.valueOf(request.getPrice()))
